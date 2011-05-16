@@ -19,10 +19,10 @@
     var settings = jQuery.extend({}, options);
     
     $(this).each(function() {
-      var source = $(this);
-      var sourceParent = $(this).parent().attr("id");
-      var selected = $(this).find("option[selected]");
-      var options = $("option", source);
+      var source = $(this),
+          sourceParent = $(this).parent().attr("id"),
+          selected = $(this).find("option[selected]"),
+          options = $("option", source);
             
       var newDropTarget = ("target-" + sourceParent);
             
