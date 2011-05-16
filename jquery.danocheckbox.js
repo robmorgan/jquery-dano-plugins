@@ -18,27 +18,27 @@
 		var settings = jQuery.extend({checkboxClass: 'checkbox', activeClass: 'active', hide: true}, options);
 		
 		if (settings.hide) {
-			$(this).hide();
+      $(this).hide();
 		}
 		
 		$(this).each(function(index, inputEl) {
 			var id = $(this).attr('id');
 			
 			var el = $(document.createElement('div'))
-			   .addClass(settings.checkboxClass)
-		       .insertAfter(this)
-		       .click(function() {
-		    	   if ($(this).hasClass(settings.activeClass)) {
-		    		   // is currently checked, so uncheck
-		    		   jQuery.fn.danoCheckbox.uncheck(inputEl, this, settings);
-		    	   } else {
-		    		   // is currently unchecked, so check
-		    		   jQuery.fn.danoCheckbox.check(inputEl, this, settings);
-		    	   }
-		        });
+        .addClass(settings.checkboxClass)
+		    .insertAfter(this)
+		    .click(function() {
+		      if ($(this).hasClass(settings.activeClass)) {
+		    	  // is currently checked, so uncheck
+		    		jQuery.fn.danoCheckbox.uncheck(inputEl, this, settings);
+		    	} else {
+		    	  // is currently unchecked, so check
+		    	  jQuery.fn.danoCheckbox.check(inputEl, this, settings);
+		    	}
+		    });
 			
-			if ($(this).is(':checked')) {
-				$(el).addClass(settings.activeClass);
+      if ($(this).is(':checked')) {
+        $(el).addClass(settings.activeClass);
 			}
 			
 			// also add a click handler to any labels with a matching 'for' attribute
@@ -50,17 +50,16 @@
 				event.preventDefault();
 				
 				if ($(el).hasClass(settings.activeClass)) {
-					// is currently checked, so uncheck
+          // is currently checked, so uncheck
 					jQuery.fn.danoCheckbox.uncheck(inputEl, el, settings);
 				} else {
-	    		    // is currently unchecked, so check
+          // is currently unchecked, so check
 					jQuery.fn.danoCheckbox.check(inputEl, el, settings);
 				}
 			});
 		});
 		
 		return this;
-		
 	};
 	
 	jQuery.fn.danoCheckbox.check = function(inputEl, fancyEl, settings) {
