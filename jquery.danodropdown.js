@@ -2,12 +2,12 @@
 
   jQuery DanoDropdown Plugin 0.1
   
-  Copyright (c) 2011 EDM.DJ
+  Copyright (c) 2011 Rob Morgan
   
   Licensed under the MIT license:
   http://www.opensource.org/licenses/mit-license.php
 
-  http://edm.dj/site/contact
+  http://robmorgan.id.au
 
 */
 
